@@ -9,7 +9,7 @@ Stampare in console la bici con peso minore utilizzando destructuring e template
 const bike = [
     {
         name: 'Cervélo',
-        weight: 6.2
+        weight:15
     },
     {
         name: 'Pinarello',
@@ -25,7 +25,7 @@ const bike = [
     },
     {
         name: 'Scott',
-        weight: 7.5
+        weight: 6
     },
     {
         name: 'Bianchi',
@@ -37,21 +37,21 @@ const bike = [
     },
     {
         name: 'Cannondale',
-        weight: 6
+        weight: 10
     },
     {
         name: 'Specialized',
-        weight: 7.5
+        weight: 5
     }
 ];
 
 //Stampare in console la bici con peso minore utilizzando destructuring e template literal :
 
-const bikeLight = bike[0];
+let bikeLight = bike[0];
 
 for ( let bikes of bike) {
-    if (bikes.peso < bikeLight.peso) {
-        bikeLight = bike;
+    if (bikes.weight  < bikeLight.weight ) {
+        bikeLight = bikes;
     } 
 }
 
@@ -59,3 +59,8 @@ for ( let bikes of bike) {
 const { name , weight}=bikeLight;
 
 console.log(`The lightest bike is: ${name} with a weight: ${weight}`);
+
+
+let elementBike=document.getElementById('bikelight')
+
+elementBike.innerHTML=`The lightest bike is: ${name} with a weight: ${weight}`;
