@@ -36,6 +36,8 @@ const footballTeams = [
         fail: 0
     }
 ];
+
+
 //Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
 //facciamo una function che ci darà i numeri random
 function numberRandom(min,max) {
@@ -53,3 +55,10 @@ for(let team of footballTeams){
 const teamsFail = footballTeams.map(({name,fail}) => ({name,fail}))
 console.log(teamsFail);
 
+const failsTeam = document.getElementById('fails_of_team')
+
+let markup = `<h2>Results of football teams</h2>`
+
+teamsFail.forEach(team =>{
+    markup+= `<div>${team.name}: ${team.fail} fail </div>`})
+failsTeam.innerHTML=markup
