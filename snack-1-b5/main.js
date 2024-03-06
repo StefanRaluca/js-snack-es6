@@ -38,15 +38,22 @@ const zucchine = [
     }
 ];
 
-function pesoTotale(zucchine) {
+/* function pesoTotale(zucchine) {
     let sum = 0;
     for (let zucchina of zucchine ) {
         sum += zucchina.peso
         
     }
     return sum;
-}
-const pesoZucchine = pesoTotale(zucchine)
+} */
 
-console.log(pesoZucchine);
+sum =0;
+
+zucchine.forEach(zucchine => {
+    sum+=zucchine.peso
+})
+
+console.log(sum);
+
+
 
